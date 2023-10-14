@@ -8,6 +8,8 @@
 
 class Solution:
     def verticalOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        if not root:
+            return None
         traversal = defaultdict(list)
         queue = deque([(root,0)])
         minc = maxc = 0
